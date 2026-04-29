@@ -13,7 +13,7 @@ jobs:
       
     steps:
       - name: Checkout code
-        uses: actions/checkout@2713323362a1258dc644b821f3f1c4688a2a9f3a
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
 
       - name: Set up Python
         uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c
