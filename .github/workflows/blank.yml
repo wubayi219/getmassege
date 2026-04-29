@@ -146,11 +146,12 @@ jobs:
       - name: Send email notification
         if: always()
         env:
-          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_ADDRESS: '${{ secrets.EMAIL_ADDRESS }}'
+          EMAIL_PASSWORD: '${{ secrets.EMAIL_PASSWORD }}'
         run: |
           if [ -z "$EMAIL_ADDRESS" ] || [ -z "$EMAIL_PASSWORD" ]; then
             echo "⚠️ 未配置邮箱凭证，跳过邮件发送"
-            exit 0
+          else
+            echo"EMAIL_USER is set (length: ${#EMAIL_USER})"
           fi
-          echo "✅ 邮件发送逻辑已启用（需配置 Secrets）"
+          
