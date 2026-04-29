@@ -152,6 +152,7 @@ jobs:
           if [ -z "$EMAIL_ADDRESS" ] || [ -z "$EMAIL_PASSWORD" ]; then
             echo "⚠️ 未配置邮箱凭证，跳过邮件发送"
           else
-            echo"EMAIL_USER is set (length: ${#EMAIL_USER})"
+            echo "EMAIL_ADDRESS is set (length: ${#EMAIL_ADDRESS})"
+            echo "EMAIL_PASSWORD is set (length: ${#EMAIL_PASSWORD})"
           fi
           
